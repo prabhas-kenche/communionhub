@@ -1,0 +1,188 @@
+.navbar {
+  background-color: #ffffff;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  background-color: #ffffff;
+}
+
+.navbar-brand {
+  background-color: #ffffff;
+}
+
+.communion-logo {
+  width: 180px;
+  height: auto;
+  transition: width 0.3s ease, height 0.3s ease;
+  margin-right: 20px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #ffffff;
+}
+
+.navbar .nav-link {
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #000000 !important;
+  font-family: "Roboto", sans-serif;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 8px 15px;
+}
+
+.navbar .nav-link:hover {
+  color: #17252a !important;
+}
+
+.navbar .active-nav {
+  font-weight: bold;
+  border-bottom: 2px solid #17252a;
+  padding-bottom: 3px;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    height: 70px;
+    padding: 10px 30px;
+  }
+
+  .navbar-content {
+    margin-left: 0;
+  }
+
+  .communion-logo {
+    width: 140px;
+  }
+
+  .navbar-collapse {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-collapse.show {
+    display: flex;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navbar .nav-link {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 65px;
+    padding: 10px 20px;
+  }
+
+  .communion-logo {
+    width: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    height: 60px;
+    padding: 10px;
+  }
+
+  .communion-logo {
+    width: 100px;
+  }
+
+  .navbar .nav-link {
+    font-size: 1rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .communion-logo {
+    width: 90px;
+  }
+}
+
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  outline: none;
+  border-width: 0;
+}
+
+.menu-toggle:focus,
+.menu-toggle:active {
+  outline: none;
+  box-shadow: none;
+}
+
+
+@media (max-width: 992px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+  }
+
+  .navbar-collapse.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

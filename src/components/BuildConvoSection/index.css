@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.build-conv-wrapper {
+    background: #f8f9fc;
+    padding: 50px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.build-conv-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.conversation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.text-content h1 {
+    font-size: 40px;
+    color: #222;
+}
+
+.text-content h2 {
+    font-size: 35px;
+    color: rgb(40, 101, 186);
+}
+
+.text-content p {
+    color: rgb(40, 38, 38);
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+.join-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, #4A90E2, #003A8C);
+}
+
+.join-btn:hover {
+    background: linear-gradient(45deg, #003A8C, #4A90E2);
+    transform: scale(1.05);
+}
+
+
+.conversation-image-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.full-width-img1 {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.full-width-img2{
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+    .conversation {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    .image-container {
+        gap: 10px;
+    }
+}
+
+
+.text-content-2{
+    margin-top: 10px;
+
+}
+
+.x-element{
+    color: #003A8C;
+}
+
+.adjustment{
+    margin-top: 20px;
+}
+
+.connection-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.connection-card {
+    background: #f8f8f8;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.connection-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 24px;
+    color: #1d3b5d;
+}
+
+.connection-card p {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+    .build-conv-wrapper {
+        padding: 30px 5%;
+    }
+
+    .build-conv-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .conversation {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    .conversation-image-container {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .full-width-img1,
+    .full-width-img2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .connection-container {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .connection-card {
+        width: 90%;
+        padding: 12px 20px;
+    }
+
+    .text-content h1 {
+        font-size: 32px;
+    }
+
+    .text-content h2 {
+        font-size: 28px;
+    }
+
+    .text-content p {
+        font-size: 14px;
+    }
+
+    .join-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
