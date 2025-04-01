@@ -98,8 +98,8 @@ h2 {
 }
   
 .event-form button {
-  background: #007bff;
-  color: white;
+  background: burlywood;
+  color: black;
   padding: 10px;
   border: none;
   cursor: pointer;
@@ -107,7 +107,7 @@ h2 {
 }
   
 .event-form button:hover {
-  background: #0056b3;
+  background: rgb(201, 160, 106);
   transform: scale(1.05);
 }
   
