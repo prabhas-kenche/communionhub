@@ -1,0 +1,128 @@
+.events-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+  
+h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #333;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+  
+.filter-buttons {
+  margin-bottom: 20px;
+}
+  
+.filter-buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+  
+.filter-buttons button.active {
+  background-color: #0056b3;
+}
+  
+.events-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+  
+.event-card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.5s ease-in forwards;
+}
+  
+.event-card h3 {
+  margin-bottom: 5px;
+}
+  
+.event-card p {
+  margin: 5px 0;
+}
+  
+.category-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+  
+.religious {
+  background-color: #6a0dad;
+}
+  
+.social {
+  background-color: #ff9800;
+}
+  
+.charity {
+  background-color: #28a745;
+}
+  
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards 0.5s;
+}
+  
+.event-form input,
+.event-form select,
+.event-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+  
+.event-form button {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+  
+.event-form button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+  
+@media (max-width: 600px) {
+  .events-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -5,7 +5,6 @@ import './index.css';
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('/');
   const menuRef = useRef(null);
 
   useEffect(() => {
@@ -49,16 +48,13 @@ const Header = () => {
         <div className="navbar-nav">
           {['/', '/events', '/about'].map((path, index) => (
             <NavLink
-              key={index}
-              className={`nav-link ${activeLink === path ? 'active-nav' : ''}`}
-              to={path}
-              onClick={() => {
-                setActiveLink(path);
-                setMenuOpen(false);
-              }}
-            >
-              {path === '/' ? 'Home' : path.replace('/', '').charAt(0).toUpperCase() + path.slice(2)}
-            </NavLink>
+            key={index}
+            className={({ isActive }) => `nav-link ${isActive ? 'active-nav' : ''}`}
+            to={path}
+            onClick={() => setMenuOpen(false)}
+          >
+            {path === '/' ? 'Home' : path.replace('/', '').charAt(0).toUpperCase() + path.slice(2)}
+          </NavLink>          
           ))}
         </div>
       </div>
